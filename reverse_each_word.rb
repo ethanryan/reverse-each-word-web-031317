@@ -20,25 +20,13 @@
 # end #end method
 
 ### method using .collect:::
-# def reverse_each_word(string)
-#   # string.split(" ") #split string into array using each space btwn words
-#   new_array = [] #create new empty array
-#   string.split(" ").collect do |words| #split string at spaces, then loop through the resulting array and on each element...
-#     new_array << words.reverse #...reverse the word and assign it to new_array
-#   end #end do loop
-#   puts string #outputting to see original string (don't need this to line to pass test)
-#   puts new_array.join(" ") #outputting to see new string (don't need this to line to pass test)
-#   return new_array.join(" ") #return elements of new_array as string seperated by spaces
-# end #end method
-
-
 def reverse_each_word(string)
   # string.split(" ") #split string into array using each space btwn words
-  #new_array = [] #create new empty array
+  new_array = [] #create new empty array
   string.split(" ").collect do |words| #split string at spaces, then loop through the resulting array and on each element...
-    words.reverse #...reverse the word and assign it to new_array
+    new_array << words.reverse #...reverse the word and assign it to new_array
   end #end do loop
   puts string #outputting to see original string (don't need this to line to pass test)
-  #puts new_array.join(" ") #outputting to see new string (don't need this to line to pass test)
-  return string #return elements of new_array as string seperated by spaces
+  puts new_array.join(" ") #outputting to see new string (don't need this to line to pass test)
+  return new_array.join(" ") #return elements of new_array as string seperated by spaces
 end #end method
